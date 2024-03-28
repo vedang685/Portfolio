@@ -5,25 +5,23 @@ import {images} from '../../constants'
 import './About.scss'
 const abouts = [
   {title:'Web Development', description: 'I am a good Web Developer.', imgUrl:images.about01},
-  {title:'Web Design', description: 'I am a good Web Developer.', imgUrl:images.about02},
-  {title:'UI/UX', description: 'I am a good Web Developer.', imgUrl:images.about03},
-  {title:'Web Animation', description: 'I am a good Web Developer.', imgUrl:images.about04},
+  {title:'Frontend Development', description: 'I am a good Web Developer.', imgUrl:images.about02},
+  {title:'Backend Development', description: 'I am a good Web Developer.', imgUrl:images.about03},
+  {title:'MERN stack', description: 'I am a good Web Developer.', imgUrl:images.about04},
 ];
 const About = () => {
   return (
     <>
     <h2 className='head-text'>
-      I know that 
-      <span>Good Design</span>
+      I know that <span>Good Development</span>
       <br/>
-      means
-      <span>Good Business</span>
-      </h2>
+      means <span>Good Business</span>
+    </h2>
 
       <div className='app__profiles'>
         {abouts.map((about,index)=>(
           <motion.div
-            whileInView={{opacity:1}}
+            whileInView={{opacity:[0,1]}}
             whileHover={{scale:1.1}}
             transition={{duration:0.5, type:'tween'}}
             className='app__profile-item'

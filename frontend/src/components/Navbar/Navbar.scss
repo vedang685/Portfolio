@@ -18,8 +18,9 @@
     align-items: center;
 
     img{
-        width: 90px;
-        height: 20px;
+        width: 140px;
+        height: 50px;
+        object-fit: cover;
 
         @media screen and (min-width: 2000px){
             width:180px;

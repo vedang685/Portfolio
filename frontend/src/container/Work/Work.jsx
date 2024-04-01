@@ -22,7 +22,7 @@ const Work = () => {
   },[])
   
   const handleWorkFilter = (item) => {
-
+    
   }
 
   return (
@@ -94,4 +94,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Appwrap(Work,'work')

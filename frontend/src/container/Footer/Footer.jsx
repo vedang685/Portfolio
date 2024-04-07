@@ -34,17 +34,17 @@ const Footer = () => {
 
   return (
     <>
-      {!isFormSubmitted ? 
-        <>
-        <h2 className='head-text'>Take a coffee and chat with me</h2>
+        <h2 className='head-text'>Take a coffee and <span>chat </span>with me</h2>
           <div className='app__footer-cards'>
             <div className='app__footer-card'>
               <img src={images.email} alt='email'/>
               <a href="mailto:vedang685@gmail.com" className='p-text'>vedang685@gmail.com</a>
             </div>
+      {!isFormSubmitted ? 
+        <>
             <div className='app__footer-card'>
               <img src={images.mobile} alt='email'/>
-              <a href="tel:+91 9315372836" className='p-text'>+919315372836</a>
+              <a href="tel:+91 9315372836" className='p-text'>+91 9315372836</a>
             </div>
             <div className='app__footer-form app__flex'>
               <div className='app__flex'>
@@ -54,17 +54,17 @@ const Footer = () => {
                 <input name="email" className='p-text' type="email" placeholder="Your Email" value={email} onChange={handleChangeInput}/>
               </div>
               <div>
-                <textarea className="p-text" placeholder="Your Message" value={message} name={message} cols="30" rows="10" onChange={handleChangeInput}></textarea>
+                <textarea className="p-text" placeholder="Your Message" value={message} name= "message" onChange={handleChangeInput}></textarea>
               </div>
               <button type='button' className='p-text' onClick={handleSubmit}>{loading ? 'Loading':'Send Message'}</button>
             </div>
+            </> 
+            : 
+            <div>
+              <h3 className='head-text'>Thankyou for getting in <span>touch</span></h3>
+            </div>
+          }
          </div>
-        </> 
-        : 
-        <div>
-          <h3 className='head-text'>Thankyou for getting in touch</h3>
-        </div>
-      }
     </>
   )
 }

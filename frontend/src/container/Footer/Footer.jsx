@@ -40,12 +40,12 @@ const Footer = () => {
               <img src={images.email} alt='email'/>
               <a href="mailto:vedang685@gmail.com" className='p-text'>vedang685@gmail.com</a>
             </div>
-      {!isFormSubmitted ? 
-        <>
             <div className='app__footer-card'>
               <img src={images.mobile} alt='email'/>
               <a href="tel:+91 9315372836" className='p-text'>+91 9315372836</a>
             </div>
+      {!isFormSubmitted ? 
+        <>
             <div className='app__footer-form app__flex'>
               <div className='app__flex'>
                 <input name="name" className='p-text' type="text" placeholder="Your Name" value={name} onChange={handleChangeInput}/>
@@ -60,10 +60,10 @@ const Footer = () => {
             </div>
             </> 
             : 
-            <div>
+            <div style={{marginTop:'4rem'}}>
               <h3 className='head-text'>Thankyou for getting in <span>touch</span></h3>
             </div>
-          }
+      }
          </div>
     </>
   )

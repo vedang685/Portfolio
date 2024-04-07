@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import {Appwrap} from '../../wrapper'
 import {images} from '../../constants'
 
-const id = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const id = process.env.REACT_APP_SANITY_PROJECT_ID;
 console.log(id);
 
 const scaleVariants = {

@@ -4,6 +4,9 @@ import {motion} from 'framer-motion'
 import {Appwrap} from '../../wrapper'
 import {images} from '../../constants'
 
+const id = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+console.log(id);
+
 const scaleVariants = {
   whileInView:{
     scale: [0,1],
@@ -32,8 +35,8 @@ const Header = () => {
             </div>
           </div>
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Web Developer</p>
-            <p className='p-text'>Freelancer</p>
+            <p className='p-text'>I'm a Full stack Web Developer and a Freelancer </p>
+            {/* <p className='p-text'>Freelancer</p> */}
           </div>
         </div>
       </motion.div>

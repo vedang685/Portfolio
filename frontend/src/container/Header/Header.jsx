@@ -4,9 +4,6 @@ import {motion} from 'framer-motion'
 import {Appwrap} from '../../wrapper'
 import {images} from '../../constants'
 
-const id = process.env.REACT_APP_SANITY_PROJECT_ID;
-console.log(id);
-
 const scaleVariants = {
   whileInView:{
     scale: [0,1],

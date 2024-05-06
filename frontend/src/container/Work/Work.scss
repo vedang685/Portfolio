@@ -132,6 +132,11 @@
         margin-top: 1rem;
         line-height: 1.5;
     }
+    .app__footer-link{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
     .app__work-tag{
         position: absolute;
         padding: 0.5rem 1rem;

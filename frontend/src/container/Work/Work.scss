@@ -132,6 +132,32 @@
         margin-top: 1rem;
         line-height: 1.5;
     }
+    .caseStudy-div{
+        margin-top: 1.5rem;
+    }
+    .caseStudy-button{
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: 10px #000;
+        background-color:rgba($color: #dfdfdf, $alpha: 1.0);
+        color: #000;
+        font-size: 12px;
+        font-weight: 100;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+
+        &:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        @media screen and (min-width:2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
     .app__footer-link{
         display: flex;
         flex-direction: row;

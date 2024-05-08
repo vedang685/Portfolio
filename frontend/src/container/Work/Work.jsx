@@ -103,11 +103,6 @@ const Work = () => {
             <div className='app__work-content app__flex'>
               <h4 className='bold-text'>{work.title}</h4>
               <p className='p-text' style={{marginTop:10}}>{work.description}</p>
-              {isLargeScreen && (
-                <div className='caseStudy-div'>
-                  <Link className="caseStudy-button" to="/case-study">Case Study</Link>
-                </div>
-              )}
               {isSmallScreen && (
                 <div className='app__footer-link app__social'>
                 <a href= {work.codeLink}>
@@ -118,6 +113,9 @@ const Work = () => {
                 </a>
                 </div>
               )}
+              <div className='caseStudy-div'>
+                  <Link className="caseStudy-button" to="/case-study">Case Study</Link>
+              </div>
               <div className='app__work-tag app__flex'>
                 <p className='p-text'>{work.tags[0]}</p>
               </div>

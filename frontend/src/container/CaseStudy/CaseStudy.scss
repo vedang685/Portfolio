@@ -36,12 +36,12 @@
         padding: 1.25rem;
         border-radius: 0.75rem;
     }
-    @media screen and (max-width:500px){
-        width: 250px;
-        margin: 1.2rem;
+    @media screen and (max-width:650px){
+        width: 350px;
+        margin: 1.5rem;
     }
-    @media screen and (max-width:750px){
-        width: 400px;
+    @media screen and (min-width:650px){
+        width: 450px;
         margin: 1.5rem;
     }
     @media screen and (min-width:750px){

@@ -8,6 +8,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 import { FaGithub } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 import './Work.scss'
+import { Link } from 'react-router-dom'
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -102,7 +103,11 @@ const Work = () => {
             <div className='app__work-content app__flex'>
               <h4 className='bold-text'>{work.title}</h4>
               <p className='p-text' style={{marginTop:10}}>{work.description}</p>
-              {console.log(work)}
+              {isLargeScreen && (
+                <div className='caseStudy-div'>
+                  <Link className="caseStudy-button" to="/case-study">Case Study</Link>
+                </div>
+              )}
               {isSmallScreen && (
                 <div className='app__footer-link app__social'>
                 <a href= {work.codeLink}>

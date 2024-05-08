@@ -1,23 +1,53 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.scss'
 import {HiMenuAlt4, HiX} from 'react-icons/hi'
 import {motion} from 'framer-motion'
 import { images } from '../../constants'
+import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const[toggle, setToggle] = useState(false)
+    const location = useLocation();
+    const [cs, setCs] = useState(null);
+
+    useEffect(()=>{
+        if(location.pathname === '/case-study'){
+            setCs(true)
+        }else{
+            setCs(false)
+        }
+    },[location])
+
   return (
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
-            <img src={images.logo} alt="" />
+            {cs?(
+                <Link to="/"><img src={images.logo} alt="" /></Link>
+            ):(
+                <img src={images.logo} alt="" />
+            )}
         </div>
         <ul className='app__navbar-links'>
-            {['home', 'about', 'work', 'skills', 'contact'].map((item)=>(
-                <li className="app__flex p-text" key={`link-${item}`}>
-                    <div></div>
-                    <a href={`#${item}`}>{item}</a>
-                </li>
-            ))}
+            {cs?(
+                null
+            ):(
+                ['home', 'about', 'work', 'skills', 'contact','case study'].map((item)=>(
+                    <li className="app__flex p-text" key={`link-${item}`}>
+                        {item==='case study'?(
+                            <>
+                            <div></div>
+                            <Link to="/case-study">{item}</Link>
+                            </>
+                        ):(
+                        <>
+                        <div></div>
+                        <a href={`#${item}`}>{item}</a>
+                        </>
+                        )}
+                    </li>
+                ))
+            )}
         </ul>
 
         <div className='app__navbar-menu'>

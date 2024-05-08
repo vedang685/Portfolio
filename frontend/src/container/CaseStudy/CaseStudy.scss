@@ -1,0 +1,136 @@
+#caseStudy{
+    position:relative;
+    background: url('../../assets/bgIMG.png');
+    background-size:cover;
+    background-repeat:repeat;
+    background-position: center;
+}
+
+.y-space{
+    margin-top: 2rem;
+}
+
+.app__caseStudy{
+    flex:1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__caseStudy-item{
+    width: 1000px;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+        box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+
+    @media screen and (min-width:2000px){
+        width: 1000px;
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+    }
+    @media screen and (max-width:300px){
+        width: 100%;
+        margin: 1rem;
+    }
+    @media screen and (max-width:750px){
+        width: 400px;
+        margin: 1.5rem;
+    }
+    @media screen and (min-width:750px){
+        width: 600px;
+        margin: 1.5rem;
+    }
+    @media screen and (min-width:1200px){
+        width: 1000px;
+        margin: 1.5rem;
+    }
+    
+}
+.app__caseStudy-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app__caseStudy-img{
+    width: 100%;
+    position: relative;
+
+    img{
+        width: 230px;
+        height: 230px;
+        border-radius: 0.5rem;
+        object-fit: contain;
+    }
+
+    @media screen and (min-width:2000px){
+        height: 350px;
+    }
+}
+
+.app__caseStudy-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    div{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        margin: 1rem;
+        font-family: var(--font-base);
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        svg{
+            width: 50%;
+            height: 50%;
+            color: var(--white-color);
+        }
+    }
+}
+
+.app__caseStudy-content{
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    h4{
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+    .app__footer-link{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .app__work-tag{
+        position: absolute;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        background-color: #fff;
+        top: -25px
+    }
+}

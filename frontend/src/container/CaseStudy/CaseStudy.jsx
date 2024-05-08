@@ -25,9 +25,9 @@ const handleClick = () => {
             Case Study <span>Section</span> 
         </h2>
 
-        <motion.div
-            whileInView={{y:[100,50,0], opacity:[0,0,1]}}
-            transition={{duration:0.5}}
+        <div
+            // whileInView={{y:[100,50,0], opacity:[0,0,1]}}
+            // transition={{duration:0.5}}
             className='app__caseStudy-portfolio'
         >
             <div 
@@ -175,7 +175,7 @@ const handleClick = () => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     </>
   )
 }

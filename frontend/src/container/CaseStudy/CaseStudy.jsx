@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Appwrap, MotionWrap} from '../../wrapper'
 import {motion} from 'framer-motion'
 import './CaseStudy.scss'
@@ -8,6 +8,7 @@ import {AiFillEye} from 'react-icons/ai'
 import { FaGithub } from 'react-icons/fa'
 import { FaGlobe } from 'react-icons/fa'
 import {useNavigate, Link} from 'react-router-dom'
+import ScrollToTop from '../../components/ScrollToTop/ScrollToTop'
 
 
 function CaseStudy() {
@@ -19,6 +20,7 @@ const handleClick = () => {
 }
   return (
     <>
+        <ScrollToTop/>
         <h2 className='head-text y-space'>
             Case Study <span>Section</span> 
         </h2>
